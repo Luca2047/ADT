@@ -40,19 +40,20 @@ public class ArrayStack {
             }
         }
 
-        public ArrayStack copy(ArrayStack arrayStack) {
+        public ArrayStack copy() {
 
             ArrayStack tmp = new ArrayStack();
+            ArrayStack copy = this;
 
-            while (!arrayStack.empty()) {
-                tmp.push(arrayStack.top());
-                arrayStack.pop();
+            while (!copy.empty()) {
+                tmp.push(copy.top());
+                copy.pop();
             }
 
             while (!tmp.empty()) {
-                arrayStack.push(tmp.top());
+                copy.push(tmp.top());
                 tmp.pop();
             }
-            return arrayStack;
+            return copy;
         }
 }

@@ -9,7 +9,7 @@ public class Main {
 		stack.push(66);
 		stack.push(22);
 
-		ArrayStack copy = stack.copy(stack);
+		ArrayStack copy = stack.copy();
 		System.out.println(copy.top());
 		copy.pop();
 		System.out.println(copy.top());
