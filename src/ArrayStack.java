@@ -31,12 +31,28 @@ public class ArrayStack {
             }
         }
 
-        public void top() {
+        public int top() {
             if (!empty()) {
-                System.out.println(stapel[tos]);
+                return stapel[tos];
             }
             else {
-                System.out.println(-1);
+                return -1;
             }
+        }
+
+        public ArrayStack copy(ArrayStack arrayStack) {
+
+            ArrayStack tmp = new ArrayStack();
+
+            while (!arrayStack.empty()) {
+                tmp.push(arrayStack.top());
+                arrayStack.pop();
+            }
+
+            while (!tmp.empty()) {
+                arrayStack.push(tmp.top());
+                tmp.pop();
+            }
+            return arrayStack;
         }
 }
