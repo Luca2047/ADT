@@ -9,14 +9,21 @@ public class Queue {
 		kopf= new ListenElement(wert);
 	}
 	
-	public boolean isEmpty() {return true;}
-	
+	public boolean isEmpty() {
+		if (kopf==null) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 
-	
+
+
 	public void enqeue(int wert) {
 		tmp= new ListenElement(wert);
 		kopf.add(tmp);
-		
+
 	}
 	
 	public void deque() throws Exception {

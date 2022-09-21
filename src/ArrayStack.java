@@ -49,11 +49,17 @@ public class ArrayStack {
                 tmp.push(copy.top());
                 copy.pop();
             }
-
             while (!tmp.empty()) {
                 copy.push(tmp.top());
                 tmp.pop();
             }
             return copy;
+        }
+
+        public void connect(ArrayStack arrayStack) {
+            while (!arrayStack.empty()) {
+                this.push(arrayStack.top());
+                arrayStack.pop();
+            }
         }
 }
