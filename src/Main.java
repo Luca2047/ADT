@@ -24,6 +24,7 @@ public class Main {
 		queue2.enqueue(1);
 		queue2.enqueue(2);
 		queue.concat(queue2);
+		System.out.println(queue.contains(5));
 
 		//komplette Queue ausgeben
 		for (int i=0; i< queue.eoq+1;i++) {

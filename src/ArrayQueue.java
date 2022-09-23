@@ -46,4 +46,13 @@ public class ArrayQueue {
             second.dequeue();
         }
     }
+
+    public boolean contains(int x) {
+        for (int i=0;i<=eoq;i++) {
+            if (queue[i]==x) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
